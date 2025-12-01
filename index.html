@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokemon Sapphire Roguelike</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <section id="scene-menu" class="scene">
+    <h1>Pokemon Sapphire Roguelike</h1>
+    <div class="menu-buttons">
+      <button id="btn-new">Новая игра</button>
+      <button id="btn-exit">Выход</button>
+    </div>
+  </section>
+
+  <section id="scene-choose" class="scene hidden">
+    <h2>Выберите стартера</h2>
+    <div id="starters" class="cards"></div>
+    <button id="btn-back-to-menu">Назад</button>
+  </section>
+
+  <section id="scene-world" class="scene hidden">
+    <div class="topbar">
+      <div id="party-panel"></div>
+      <div id="inventory-panel"></div>
+    </div>
+    <div id="map-container"></div>
+    <div class="controls">
+      <div>Перемещение: стрелки</div>
+      <button id="btn-new-game-small">Новая игра</button>
+    </div>
+  </section>
+
+  <section id="scene-battle" class="scene hidden">
+    <div id="battle-ui">
+      <div id="battle-enemy" class="battle-side"></div>
+      <div id="battle-player" class="battle-side"></div>
+    </div>
+    <div id="battle-actions">
+      <button id="act-attack">Атака</button>
+      <button id="act-run">Бег</button>
+      <button id="act-item">Предметы</button>
+      <button id="act-switch">Сменить</button>
+    </div>
+    <pre id="battle-log" class="log"></pre>
+    <div id="battle-extra" class="hidden"></div>
+  </section>
+
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
